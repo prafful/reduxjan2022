@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import FriendDetail from './containers/frienddetail';
 import FriendList from './containers/friendlist';
+import FriendUpdate from './containers/friendupdate';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
      < FriendList></FriendList>
      <hr></hr>
      <FriendDetail></FriendDetail>
+     <hr></hr>
+     <FriendUpdate></FriendUpdate>
 
     </div>
   );

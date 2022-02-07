@@ -1,15 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import actionFriendEditWithId from '../actions/actionFriendEditWithId';
 
 
 function FriendDetail(props) {
 
+    let friend = null
     console.log("Received values from store as props")
     console.log(props.allfriends)
     console.log(props.idclicked)
 
     function filterAndDisplay(){
-        let friend = null
+        
         friend = props.allfriends.filter((f)=>{
             return f.id == props.idclicked
         })
@@ -33,10 +36,27 @@ function FriendDetail(props) {
                     Friend location: {friend[0].location}
                     <br></br>
                     Friend since: {friend[0].since}
+                    <br></br>
+                    Acitve till date: {friend[0].active? "Yes": "No"}
+                    <br></br>
+                    <button onClick={editWithId}>Edit</button>
                 </span>
             )
         }
         
+    }
+
+    //dispatch the id which needs to be edited
+    function editWithId(){
+        let friendedit = {
+            id: friend[0].id, 
+            name: friend[0].name, 
+            location: friend[0].location, 
+            since: friend[0].since, 
+            active: friend[0].active
+        }
+        
+        props.editIdDispatch(friendedit)
     }
 
     return (  
@@ -61,7 +81,13 @@ function mapStoreAsPropsInFriendDetail(store){
         allfriends: store.allfriendsNames,
         idclicked: store.friendclickedwithid
     }
-
 }
 
-export default connect(mapStoreAsPropsInFriendDetail)(FriendDetail);
+//map function to props and dispatch the event and object
+function mapFunctionToPropsAndDispatch(dispatch){
+    return bindActionCreators({
+        editIdDispatch: actionFriendEditWithId
+    }, dispatch)
+}
+
+export default connect(mapStoreAsPropsInFriendDetail, mapFunctionToPropsAndDispatch)(FriendDetail);
