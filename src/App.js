@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './App.css';
+import FriendDetail from './containers/frienddetail';
 import FriendList from './containers/friendlist';
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
     <div className="App">
      
      < FriendList></FriendList>
+     <hr></hr>
+     <FriendDetail></FriendDetail>
 
     </div>
   );
