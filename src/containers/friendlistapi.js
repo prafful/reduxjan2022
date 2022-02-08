@@ -49,7 +49,12 @@ function FriendListAPI(props) {
 
     function friendClicked(id){
         console.log("Friend clicked with id (API): " + id)
-        props.friendClickedDispatch(id)
+        let friendClicked = friends.filter(f=>{
+            if(f.id === id){
+                return f
+            }
+        })
+        props.friendClickedDispatch(friendClicked[0])
     }
 
 

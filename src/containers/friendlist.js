@@ -13,7 +13,12 @@ function FriendList(props) {
 
     function friendClicked(id){
         console.log("Friend clicked with id: " + id)
-        props.friendClickedDispatch(id)
+        let friendClicked = props.friendsall.filter(f=>{
+            if(f.id === id){
+                return f
+            }
+        })
+        props.friendClickedDispatch(friendClicked[0])
     }
 
     function displayFriendNames(){
