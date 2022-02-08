@@ -1,7 +1,7 @@
 //all the reducers where dispatch (event + paylod) will be processd, will always receive 
 //two parameters -> state, action
 const reducerFriendNameClickedAndDispatchReceived = function(state=null, action){
-    console.log("Dispatch action received with two parameters!")
+    console.log("Dispatch name click action received with two parameters!")
     console.log("State: ")
     console.log(state)
     console.log("Action")

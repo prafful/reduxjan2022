@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import actionUpdateFriend from '../actions/actionFriendUpdate';
 
 
 function FriendUpdate(props) {
@@ -100,8 +102,10 @@ function FriendUpdate(props) {
             since: since, 
             active: active
         }
-        console.log("Updated friend which willbe dispatched as payload: ")
-        console.log(updatedFriend);
+        console.log("Updated friend which will be dispatched as payload: ")
+        console.log(updatedFriend)
+        //dispatch function as props for the action listener
+        props.dispatchUpdatedFriend(updatedFriend)
     }
 
     return (
@@ -129,4 +133,13 @@ function convertStoreToPropsForFriendUpdate(store) {
     }
 }
 
-export default connect(convertStoreToPropsForFriendUpdate)(FriendUpdate)
+//map function to props for dispatch
+function mapUpdateFriendToPropsAndDispatch(dispatch){
+    //map function as props to some action listener
+    //action listener will broadcast the dispatch
+    return bindActionCreators({
+        dispatchUpdatedFriend: actionUpdateFriend
+    }, dispatch )
+}
+
+export default connect(convertStoreToPropsForFriendUpdate, mapUpdateFriendToPropsAndDispatch)(FriendUpdate)

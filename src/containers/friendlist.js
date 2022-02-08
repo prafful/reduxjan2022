@@ -33,7 +33,9 @@ function FriendList(props) {
 
     return ( 
         <div>
-            List of friends from store! (friendlist component -> friend compoent)
+            List of friends from store! 
+            <br></br>
+            (friendlist component -> friend compoent)
             <table border="1">
                 <thead>
                     <tr>
@@ -60,7 +62,7 @@ function convertFriendStoreToProps(storeReceived){
     }
 }
 
-//
+//map function to props and dispatch
 function mapPropsFunctionToActionAndDispatch(dispatch){
     return bindActionCreators({
         friendClickedDispatch: actionFriendNameClicked

@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 import reducerAliensData from "./reducer-alien";
+import reducerAPIFriendsData from "./reducer-api-friends";
 import reducerFriendsData from "./reducer-friend";
 import reducerFriendNameClickedAndDispatchReceived from "./reducer-friendclicked";
 import reducerFriendEditDispatchReceived from "./reducer-friendedited";
@@ -12,7 +13,8 @@ const allFriendReducers = combineReducers(
         allotherfriends: reducerOtherfriendsData,
         allaliens: reducerAliensData,
         friendclickedwithid: reducerFriendNameClickedAndDispatchReceived,
-        friendeditwithid: reducerFriendEditDispatchReceived
+        friendeditwithid: reducerFriendEditDispatchReceived,
+        apiallfriends: reducerAPIFriendsData
     }
 )
 
