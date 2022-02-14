@@ -82,7 +82,8 @@ function FriendDetail(props) {
             name: props.friendclicked.name,
             location: props.friendclicked.location,
             since: props.friendclicked.since,
-            active: props.friendclicked.active
+            active: props.friendclicked.active,
+            type: props.friendclicked.type
         }
 
         props.editIdDispatch(friendedit)

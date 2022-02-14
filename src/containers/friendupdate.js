@@ -13,6 +13,7 @@ function FriendUpdate(props) {
     const [location, setLocation] = useState("")
     const [since, setSince] = useState(0)
     const [active, setActive] = useState(false)
+    // const [type, setType] = useState("")
 
 
     useEffect(()=>{
@@ -100,7 +101,8 @@ function FriendUpdate(props) {
             name: name, 
             location: location, 
             since: since, 
-            active: active
+            active: active,
+            type: friend.type
         }
         console.log("Updated friend which will be dispatched as payload: ")
         console.log(updatedFriend)

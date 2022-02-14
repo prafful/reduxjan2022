@@ -1,17 +1,108 @@
 {
-    "allfriends": [
-        {"id":1,"name":"Florina","location":"eu","since":2,"active":false},
-        {"id":2,"name":"Ricca","location":"platea dictumst","since":11,"active":true},
-        {"id":3,"name":"Julina","location":"pede","since":12,"active":true},
-        {"id":4,"name":"Sallyanne","location":"nulla mollis","since":3,"active":true},
-        {"id":5,"name":"Etty","location":"at velit","since":7,"active":true},
-        {"id":6,"name":"Merissa","location":"ultrices","since":6,"active":false},
-        {"id":7,"name":"Codie","location":"enim in","since":3,"active":false},
-        {"id":8,"name":"Benedetto","location":"consequat ut","since":4,"active":true},
-        {"id":9,"name":"Storm","location":"rhoncus","since":15,"active":false},
-        {"id":10,"name":"Lilllie","location":"maecenas ut","since":4,"active":true},
-        {"id":11,"name":"Morty","location":"non velit","since":15,"active":true},
-        {"id":12,"name":"Locke","location":"eu","since":8,"active":false},
-        {"id":13,"name":"Tobye","location":"at","since":2,"active":true}
-    ]
+  "allfriends": [
+    {
+      "id": 1,
+      "name": "Florina",
+      "location": "eu",
+      "since": 2,
+      "active": false,
+      "type": "api"
+    },
+    {
+      "id": 2,
+      "name": "Ricca",
+      "location": "platea dictumst",
+      "since": 11,
+      "active": true,
+      "type": "api"
+    },
+    {
+      "id": 3,
+      "name": "Julina",
+      "location": "pede",
+      "since": 12,
+      "active": true,
+      "type": "api"
+    },
+    {
+      "id": 4,
+      "name": "Sallyanne",
+      "location": "nulla mollis",
+      "since": 3,
+      "active": true,
+      "type": "api"
+    },
+    {
+      "id": 5,
+      "name": "Etty",
+      "location": "at velit",
+      "since": 7,
+      "active": true,
+      "type": "api"
+    },
+    {
+      "id": 6,
+      "name": "Merissa",
+      "location": "ultrices",
+      "since": 6,
+      "active": false,
+      "type": "api"
+    },
+    {
+      "id": 7,
+      "name": "Codie",
+      "location": "enim in",
+      "since": 3,
+      "active": false,
+      "type": "api"
+    },
+    {
+      "id": 8,
+      "name": "Benedetto",
+      "location": "consequat ut",
+      "since": 4,
+      "active": true,
+      "type": "api"
+    },
+    {
+      "active": "false",
+      "location": "Korea",
+      "name": "Kia",
+      "since": "3",
+      "type": "api",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "name": "Lilllie",
+      "location": "maecenas ut",
+      "since": 4,
+      "active": true,
+      "type": "api"
+    },
+    {
+      "id": 11,
+      "name": "Morty",
+      "location": "non velit",
+      "since": 15,
+      "active": true,
+      "type": "api"
+    },
+    {
+      "id": 12,
+      "name": "Locke",
+      "location": "eu",
+      "since": 8,
+      "active": false,
+      "type": "api"
+    },
+    {
+      "id": 13,
+      "name": "Tobye",
+      "location": "at",
+      "since": 2,
+      "active": true,
+      "type": "api"
+    }
+  ]
 }
